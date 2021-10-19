@@ -7,7 +7,7 @@ public:
 	~Typeing();
 	void Update();
 	void Draw();
-	string CreateRomaJI(string num);
+	void CreateRomaJI(string num);
 	bool CheckInputRoma(char NowType,int Num);
 	string ConverterROMA();
 private:

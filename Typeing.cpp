@@ -34,41 +34,24 @@ Typeing::~Typeing()
 
 void Typeing::Update()
 {
-	//	// –¼‘O‚Ì“ü—Í
-	//KeyInputSingleCharString(0, 56, 1, Name, FALSE);
-	/*char tmp=mk->My_putKeyCheck();
-	if (tmp!=NULL)
-	{
-		InPut += tmp;
-	}*/
+
 	CreateRomaJI("‚±‚ñ‚Ô");
 	if (CheckInputRoma(mk->My_putKeyCheck(), TypingData.CompleteIndexNum))
 	{
-		/*InPut = mk->My_putKeyCheck();*/
 		charstate++;
 	}
 }
 
 void Typeing::Draw()
 {
-	
-	/*for (int i = 0; i < TypingData.TableIndexNum; i++)
-	{
-		printfDx("%d, ", TypingData.TableIndex[i]);
-	}*/
 	printfDx("\n");
 	printfDx("%s",ConverterROMA().c_str());
-	/*CheckInputRoma(mk->My_putKeyCheck(), CreateRomaJI("‚±‚ñ‚Ô"));*/
-	/*for (auto i = 0; i < TypingData.CompleteIndexNum; i++)
-	{
-		DrawFormatString(100, 100 + (15 * i), GetColor(255, 255, 255), "%c, ", TypingData.CompletionString[i]);
-	}*/
 	DrawFormatString(100, 100, GetColor(255, 0, 0), "%s, ", TMP.c_str());
 	
 	DrawFormatString(100, 150, GetColor(255, 255, 255), "%s, ", InPut.c_str());
 }
 
-string Typeing::CreateRomaJI(string num)
+void Typeing::CreateRomaJI(string num)
 {
 
 	string tmp = {' ','\n',};
@@ -88,22 +71,6 @@ string Typeing::CreateRomaJI(string num)
 			}
 		}
 	}
-
-	
-	
-
-	//for (int j = 0; j < num.size(); j+=2)
-	//{
-	//	for (int i = 0; i < 200; i++)
-	//	{
-	//		if ()
-	//		{
-
-	//		}
-	//	}
-	//}
-	
-	return SUM;
 }
 
 bool Typeing::CheckInputRoma(char NowType,int Num)
@@ -119,7 +86,6 @@ bool Typeing::CheckInputRoma(char NowType,int Num)
 				
 					TypingData.TableIndexPattern[TypingData.nownum] = i;
 				TypingData.nownum++;
-				/*charstate++;*/
 				if (charstate== type_My_Data[TypingData.TableIndex[Num]].InputChars[i].size()-1)
 				{
 					charstate = -1;
@@ -134,26 +100,6 @@ bool Typeing::CheckInputRoma(char NowType,int Num)
 		
 	}
 	return false;
-		
-	/*if (Roma[TypingData.CompleteIndexNum]!=NULL)
-	{
-		if (Roma[TypingData.CompleteIndexNum] == NowType)
-		{
-			TypingData.CompletionString[TypingData.CompleteIndexNum] = NowType;
-			TypingData.CompleteIndexNum++;
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-	else
-	{
-		return false;
-	}*/
-	
-	
 	
 }
 
@@ -164,8 +110,6 @@ string Typeing::ConverterROMA()
 	{
 		tmpC += type_My_Data[TypingData.TableIndex[i]].InputChars[TypingData.TableIndexPattern[i*2]];
 	}
-
-
 	return tmpC;
 }
 
