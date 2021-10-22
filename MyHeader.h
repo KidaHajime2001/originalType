@@ -28,3 +28,4 @@ using namespace std;
 
 //object
 #include"Typeing.h"
+#include"Enemy3D.h"
