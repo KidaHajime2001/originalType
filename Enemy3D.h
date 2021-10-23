@@ -6,7 +6,6 @@ class enemy
 
 public:
 	enemy();
-	enemy(char* Infilename);
 	~enemy();
 	void Update();
 	void draw();
@@ -21,10 +20,7 @@ public:
 	};
 private:
 	
-	int model_Handle;
-	int AnimHandle[STATE_SIZE];
-	int AttachIndex;
-	EnemyState State;
+	
 
 };
 

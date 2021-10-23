@@ -5,28 +5,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Scene">
-      <UniqueIdentifier>{4661cdf3-ab1e-43b5-828e-cc9fd51aae3b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Scene">
       <UniqueIdentifier>{caf5c0c8-725a-44cf-80f6-3b1445dc4b14}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Header">
-      <UniqueIdentifier>{d57cd6e9-f70d-433a-b8f0-89de67c7edec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Object">
-      <UniqueIdentifier>{b406292e-9485-417d-a579-8918d7ed0739}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Object\UI">
-      <UniqueIdentifier>{9c46f10d-3377-42cf-afcb-0d91f7d7c910}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Object">
       <UniqueIdentifier>{9d77c37f-0b51-41b0-a35f-002e3a6689ec}</UniqueIdentifier>
@@ -37,23 +21,42 @@
     <Filter Include="ソース ファイル\effect">
       <UniqueIdentifier>{bc5906a7-f02c-473e-aca3-2df0baf3dfcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\type">
+      <UniqueIdentifier>{1ae7b837-c093-4109-96e1-e705834bbf0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\enemy">
+      <UniqueIdentifier>{51fa846a-5fd0-4df7-a24f-d02d12d8d349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\asset">
+      <UniqueIdentifier>{a1c57b71-c8e9-45bd-9568-e8f5c46787b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene">
+      <UniqueIdentifier>{4661cdf3-ab1e-43b5-828e-cc9fd51aae3b}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ヘッダー ファイル\Scene\Title">
       <UniqueIdentifier>{96974ac1-e302-4a32-8ba0-a34af4d1bdc5}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\Scene\Title\TextCreate">
       <UniqueIdentifier>{9ec47729-6a5d-4d5b-bd4c-c3a588fde978}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Object\type">
-      <UniqueIdentifier>{1ae7b837-c093-4109-96e1-e705834bbf0c}</UniqueIdentifier>
+    <Filter Include="ヘッダー ファイル\Header">
+      <UniqueIdentifier>{d57cd6e9-f70d-433a-b8f0-89de67c7edec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Object">
+      <UniqueIdentifier>{b406292e-9485-417d-a579-8918d7ed0739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Object\UI">
+      <UniqueIdentifier>{9c46f10d-3377-42cf-afcb-0d91f7d7c910}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\Object\type">
       <UniqueIdentifier>{95eb9c61-e9a3-41bb-bc6e-239a49f7c3bb}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\effect">
       <UniqueIdentifier>{d738007b-e3f6-4f40-9a3d-ced6e277abd1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object\enemy">
-      <UniqueIdentifier>{51fa846a-5fd0-4df7-a24f-d02d12d8d349}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,11 +90,17 @@
     <ClCompile Include="Enemy3D.cpp">
       <Filter>ソース ファイル\Object\enemy</Filter>
     </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>ソース ファイル\Object\asset</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySub_1.cpp">
+      <Filter>ソース ファイル\Object\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SceneBase.h">
-      <Filter>ヘッダー ファイル\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="MyHeader.h">
       <Filter>ヘッダー ファイル\Header</Filter>
     </ClInclude>
@@ -118,6 +127,18 @@
     </ClInclude>
     <ClInclude Include="Enemy3D.h">
       <Filter>ソース ファイル\Object\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>ソース ファイル\Object\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>ヘッダー ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySub_1.h">
+      <Filter>ソース ファイル\Object\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

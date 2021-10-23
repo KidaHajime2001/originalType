@@ -10,6 +10,8 @@ public:
 	void CreateRomaJI(string num);
 	bool CheckInputRoma(char NowType,int Num);
 	string ConverterROMA();
+	bool getDamegeFlag() { return damegeflag; };
+	void setDamegeFlag(bool set) { damegeflag = set; };//true‚Åƒ_ƒ[ƒW‚ğó‚¯‚é
 private:
 	struct CONVDATA
 	{
@@ -105,4 +107,6 @@ private:
 		int chooseNum=0;
 	};
 	TMPROMA myROMAJI;
+	bool damegeflag;
+	int TextBoxImg;
 };

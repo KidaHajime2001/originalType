@@ -1,6 +1,6 @@
 #pragma once
-#define WindowSize_Width	1280
-#define WindowSize_Height	800
+#define WindowSize_Width	1920
+#define WindowSize_Height	1080
 //C++
 #include<iostream>
 #include<math.h>
@@ -29,3 +29,5 @@ using namespace std;
 //object
 #include"Typeing.h"
 #include"Enemy3D.h"
+#include"EnemySub_1.h"
+#include"Battle.h"

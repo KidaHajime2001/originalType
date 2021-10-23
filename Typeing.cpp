@@ -1,7 +1,9 @@
 #include"MyHeader.h"
 
 Typeing::Typeing()
+	:damegeflag(false)
 {
+	TextBoxImg=LoadGraph("data/img/Textbox.png");
 	mk = new My_Key;
 	for (int i = 0; i < 200; i++)
 	{
@@ -14,7 +16,7 @@ Typeing::Typeing()
 				if (StringConvTable[i].InputChars[j] != nullptr)
 				{
 					type_My_Data[i].InputChars.push_back(StringConvTable[i].InputChars[j]);
-
+					
 				}
 			}
 		}
@@ -34,8 +36,11 @@ Typeing::~Typeing()
 
 void Typeing::Update()
 {
-
-	CreateRomaJI("こんぶ");
+	if (damegeflag)
+	{
+		setDamegeFlag(false);
+	}
+	CreateRomaJI("とっとこ");
 	if (CheckInputRoma(mk->My_putKeyCheck(), TypingData.CompleteIndexNum))
 	{
 		charstate++;
@@ -47,8 +52,12 @@ void Typeing::Draw()
 	printfDx("\n");
 	printfDx("%s",ConverterROMA().c_str());
 	DrawFormatString(100, 100, GetColor(255, 0, 0), "%s, ", TMP.c_str());
-	
+	DrawGraph(0,800,TextBoxImg,true);
 	DrawFormatString(100, 150, GetColor(255, 255, 255), "%s, ", InPut.c_str());
+	if (damegeflag)
+	{
+		printfDx("痛い！！！！");
+	}
 }
 
 void Typeing::CreateRomaJI(string num)
@@ -75,7 +84,7 @@ void Typeing::CreateRomaJI(string num)
 
 bool Typeing::CheckInputRoma(char NowType,int Num)
 {
-
+	bool notfound=false;
 	for (auto i = 0; i < type_My_Data[TypingData.TableIndex[Num]].InputChars.size(); i++)
 	{
 		if (type_My_Data[TypingData.TableIndex[Num]].InputChars[i][charstate]!=NULL)
@@ -83,7 +92,6 @@ bool Typeing::CheckInputRoma(char NowType,int Num)
 			if (NowType == type_My_Data[TypingData.TableIndex[Num]].InputChars[i][charstate])
 			{
 				TMP += NowType;
-				
 					TypingData.TableIndexPattern[TypingData.nownum] = i;
 				TypingData.nownum++;
 				if (charstate== type_My_Data[TypingData.TableIndex[Num]].InputChars[i].size()-1)
@@ -99,8 +107,12 @@ bool Typeing::CheckInputRoma(char NowType,int Num)
 		}
 		
 	}
+	if (NowType!=NULL)
+	{
+		setDamegeFlag(true);
+		
+	}
 	return false;
-	
 }
 
 string Typeing::ConverterROMA()

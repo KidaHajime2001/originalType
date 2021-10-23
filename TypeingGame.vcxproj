@@ -151,8 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Enemy3D.cpp" />
+    <ClCompile Include="EnemySub_1.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="key.cpp" />
     <ClCompile Include="main.cpp" />
@@ -163,8 +166,11 @@
     <ClCompile Include="Typeing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="Battle.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Enemy3D.h" />
+    <ClInclude Include="EnemySub_1.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Myeffect.h" />
