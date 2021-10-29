@@ -71,6 +71,11 @@ void EnemySub_1::Update()
 		now_animend = true;
 	}
 
+
+	if (CheckHitKey(KEY_INPUT_1))
+	{
+		ChangeAnim(walk);
+	}
 	// ３Dモデルのポジション設定
 	MV1SetPosition(model_Handle, pos);
 	

@@ -109,4 +109,12 @@ private:
 	TMPROMA myROMAJI;
 	bool damegeflag;
 	int TextBoxImg;
+
+	int x, y;
+	int bx, by;
+	int mFontHandle;
+
+	const int ImgSizeX=512;
+	const int ImgSizeY=127;
+	float scale=1.0f;
 };

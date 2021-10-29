@@ -1,6 +1,7 @@
 #include "Battle.h"
 
 Battle::Battle()
+	:BG(LoadGraph("data/img/haikyo.jpg"))
 {
 	type = new Typeing;
 	mEnemy = new EnemySub_1;
@@ -14,8 +15,10 @@ Battle::~Battle()
 
 void Battle::Draw()
 {
-	type->Draw();
+	DrawExtendGraph(0, 0, 1920, 1080, BG, true);
 	mEnemy->Draw();
+	type->Draw();
+	
 }
 
 void Battle::Update(int StageLevel)
